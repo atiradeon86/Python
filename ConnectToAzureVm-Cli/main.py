@@ -38,7 +38,7 @@ mode = input('Mode:')
 if (mode == "s"):
     ShowMenu()
 
-    #Get data for RDP connection
+    #Get data for SSH connection
     sql_data = GetAllData()
 
     #Get required data
@@ -90,7 +90,7 @@ elif (mode == "r"):
 elif (mode == "p"):
     ShowMenu()
 
-    #Get data for RDP connection
+    #Get data for PSSession connection
     sql_data = GetAllData()
 
     id = input('Please enter ID:')
