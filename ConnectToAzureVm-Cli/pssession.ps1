@@ -65,5 +65,4 @@ $id = $session.id
 
 #Enter PSSession
 Enter-PSSession $id
-Start-Sleep -s 60
 }
