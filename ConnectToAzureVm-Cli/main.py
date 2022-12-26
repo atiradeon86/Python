@@ -38,8 +38,10 @@ mode = input('Mode:')
 
 # Mode s = SSH
 if (mode == "s"):
-    sql_data = GetAllData()
     ShowMenu()
+
+    #Get data for RDP connection
+    sql_data = GetAllData()
 
     #Get required data
     id = input('Please enter ID:')
@@ -57,6 +59,7 @@ elif (mode == "r"):
 
     #Get data for RDP connection
     sql_data = GetAllData()
+    
     id = input('Please enter ID:')
     id = int(id)
     hostname = sql_data[id][4]
@@ -87,11 +90,11 @@ elif (mode == "r"):
             p.communicate()
 
 elif (mode == "p"):
-
     ShowMenu()
 
     #Get data for RDP connection
     sql_data = GetAllData()
+
     id = input('Please enter ID:')
     id = int(id)
     hostname = sql_data[id][4]
