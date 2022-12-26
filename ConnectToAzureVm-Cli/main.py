@@ -15,8 +15,6 @@ def GetAllData():
     conn.close()
     return row
 
-ad_domain =""
-
 #Check for existing XML file
 def check_xml():
     xml_file = ""
@@ -59,7 +57,7 @@ elif (mode == "r"):
 
     #Get data for RDP connection
     sql_data = GetAllData()
-    
+
     id = input('Please enter ID:')
     id = int(id)
     hostname = sql_data[id][4]
