@@ -28,7 +28,7 @@ $session = Get-PSSession
 $id = $session.id
 
 #Enter PSSession
-$sess = Enter-PSSession $id
+Enter-PSSession $id
 
 } else {
 
@@ -64,6 +64,6 @@ $session = Get-PSSession
 $id = $session.id
 
 #Enter PSSession
-$sess = Enter-PSSession $id
-
+Enter-PSSession $id
+Start-Sleep -s 60
 }

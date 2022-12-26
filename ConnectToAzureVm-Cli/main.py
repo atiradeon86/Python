@@ -106,8 +106,9 @@ elif (mode == "p"):
         choice= input ("Do you want to Create a new XML file? (y/n)")
 
         if (choice =="Y" or choice == "y"):            
-                p = subprocess.Popen(["powershell.exe", "./pssession.ps1","-hostname",hostname], stdout=sys.stdout) 
+                p = subprocess.Popen(["powershell.exe", "./pssession.ps1","-hostname",hostname], stdout=sys.stdout,shell=True) 
                 p.communicate()            
+                
     else:
-        p = subprocess.Popen(["powershell.exe", "./pssession.ps1","-hostname",hostname,"-xml",xml], stdout=sys.stdout) 
+        p = subprocess.Popen(["powershell.exe", "./pssession.ps1","-hostname",hostname,"-xml",xml], stdout=sys.stdout,shell=True) 
         p.communicate()
